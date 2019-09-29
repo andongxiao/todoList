@@ -9,14 +9,17 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extend:true}));
 app.use(express.static(__dirname+ '/views'));
 app.use(express.static(__dirname+ '/public'));
-app.get('/123', function(req,res){
+
+app.get('/', function(req,res){
 	res.sendFile("index.html");
 })
-app.use(express.static(__dirname+ '/views'));
-app.use(express.static(__dirname+ '/public'));
-app.get('/guess', function(req, res){
 
-	res.sendFile("index_guess.html");
+app.get('/todo',function(req,res){
+	res.sendFile(__dirname+ "/views/index_todo.html");
+})
+
+app.get('/guess', function(req, res){
+	res.sendFile(__dirname+ "/views/index_guess.html");
 });
 
 // app.get('/', function(req, res){
