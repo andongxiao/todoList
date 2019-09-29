@@ -24,6 +24,8 @@ $(document).ready(function() {
 	})
 });
 
+
+
 function addTodos(todos){
 	todos.forEach(function(todo){
 		addTodo(todo);
@@ -88,3 +90,4 @@ function updateTodo(todo){
 		console.log("error");
 	})
 }
+
