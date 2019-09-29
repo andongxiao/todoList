@@ -1,5 +1,11 @@
 @import url('https://fonts.googleapis.com/css?family=Montserrat:300,400,700');
 
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
 body{
 	font-family: 'Montserrat', sans-serif;
 	background: #ecf0f1;
@@ -47,13 +53,14 @@ header h2{
 
 /*list styles*/
 .list{
+	font-size: 0;
 	width:800px;
 	margin:0 auto;
 }
 
 .task{
 	width:100%;
-	height:60px;
+	/* height:60px; */
 	line-height: 60px;
 	font-size: 20px;
 	padding: 0 20px;
@@ -75,8 +82,25 @@ header h2{
 }
 
 /*delete*/
+
+li{
+	display: inline;
+	/* text-align: center; */
+	/* list-style-position: inside; */
+	/* text-overflow: ellipsis;  */
+	/* overflow: hidden; */
+	/* float: left; */
+	/* white-space: nowrap; */
+	list-style-position: outside;
+}
+li p{
+	float: left;
+	display: block;
+}
 li span{
-	float:right;
+	/* float:right; */
+	margin-left:5px;
+	margin-right: -5px;
 	color:#c0392b;
 	transition: all 0.3s;
 	opacity: 0
