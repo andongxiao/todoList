@@ -2,9 +2,10 @@ var express = require('express'),
 	bodyParser = require('body-parser');
 
 var app = express();
-
+var cors = require('cors')
 var todoRoutes = require('./routes/todos');
 var guessRouter = require('./routes/guess');
+app.use(cors());
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extend:true}));
 app.use(express.static(__dirname+ '/views'));
