@@ -1,5 +1,5 @@
 d3.queue()
-    .defer(d3.json, "//unpkg.com/world-atlas@1.1.4/world/50m.json")
+    .defer(d3.json, "d3_gdp/data/topo.json")
     .defer(d3.csv,"d3_gdp/data/GDP_data.csv", function(row){
         if(row.Series === "GDP in current prices (millions of US dollars)" || row.Series === "GDP per capita (US dollars)"){
             return{
