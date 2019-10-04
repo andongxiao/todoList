@@ -25,6 +25,10 @@ app.get('/guess', function(req, res){
 app.get('/note', function(req, res){
 	res.sendFile(__dirname+ "/views/index_note.html");
 })
+
+app.get('/gdp', function(req, res){
+	res.sendFile(__dirname+ "/views/index_gdp.html");
+})
 // app.get('/', function(req, res){
 // 	res.json("Hi there from root express");
 // })
